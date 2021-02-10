@@ -1,2 +1,4 @@
 # PGA-Net
 Our PGA-Net is capable of distillating, selecting, and fusing the discriminative and attention-aware features at different scales and different levels (i.e., both semantic and natural levels). Meanwhile, focusing on fusing features both selectively and comprehensively, PGA-Net can demonstrate remarkable stability and encouraging performance even without  pre-training, making the model can be trained truly from scratch. We demonstrate the effectiveness of PGA-Net through validating on COCO and MPII benchmarks, attaining new state-of-the-art performance.
+
+We follow the settings of HRNet to scale the human detection bounding boxes to a fixed aspect ratio (height : width = 4 : 3). Then, the bounding boxes are cropped from images and resized to 128x96, 256x192 and 384x288. The Adam optimizer is used in training. The learning schedule is the same as that of HRNet for fair comparison. We develop our PGA on 4 NVIDIA 1080 Ti GPUs.
